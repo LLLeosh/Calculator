@@ -1,6 +1,7 @@
 CXX         = clang++-7
-LIBARYFLAGS = 
-CXXFLAGS    = -std=c++1z -Wall -Wextra -Wparentheses -g $(SANS)
+LIBARYFLAGS =
+IGNORE_WARN = -Wno-dangling-else -Wno-sign-compare
+CXXFLAGS    = -std=c++1z -Wall -Wextra -Wparentheses $(IGNORE_WARN) -Werror -g $(SANS)
 
 .PHONY:all seg msan
 all:
